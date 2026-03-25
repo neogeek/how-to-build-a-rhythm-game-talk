@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cx2t6cvikstas"]
+
+[ext_resource type="PackedScene" uid="uid://bdnsj80nvrimh" path="res://scenes/slides.tscn" id="1_o5qli"]
+
+[node name="Node2D" type="Node2D" unique_id=1274988328]
+
+[node name="Slides" parent="." unique_id=574717495 instance=ExtResource("1_o5qli")]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=711181847]

@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bl604l2ibdupp"]
+
+[ext_resource type="Script" uid="uid://dpeaolcvh05ms" path="res://scripts/beat_match_label.gd" id="1_w7og4"]
+[ext_resource type="Texture2D" uid="uid://c6mqn57aij5ob" path="res://textures/label_nice.svg" id="2_6uf37"]
+
+[node name="Beat Match Label Nice" type="Node2D" unique_id=405616254]
+script = ExtResource("1_w7og4")
+
+[node name="LabelNice" type="Sprite2D" parent="." unique_id=898627194]
+position = Vector2(0, -35.000008)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("2_6uf37")

@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://c5l170qyfqduo"]
+
+[ext_resource type="Texture2D" uid="uid://cf0br7c371phx" path="res://textures/bgd_bird_cropped.png" id="1_ub6ro"]
+[ext_resource type="Script" uid="uid://8vw2mgqe7v0j" path="res://scripts/beat_match_pulse.gd" id="2_ub6ro"]
+[ext_resource type="PackedScene" uid="uid://054qih65wbhn" path="res://scenes/beat_match_label_bad.tscn" id="3_1jndd"]
+[ext_resource type="PackedScene" uid="uid://bl604l2ibdupp" path="res://scenes/beat_match_label_nice.tscn" id="4_mypu8"]
+[ext_resource type="AudioStream" uid="uid://b8dp5ui0v3gmi" path="res://sfx/50070__m1rk0__metronom_klack/50070__m1rk0__metronom_klack.wav" id="5_ub6ro"]
+
+[node name="BeatMatch" type="Node2D" unique_id=235352122]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1701999809]
+stream = ExtResource("5_ub6ro")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=936117527]
+scale = Vector2(0.28, 0.28)
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D" unique_id=130070760 node_paths=PackedStringArray("audio_stream_player")]
+texture = ExtResource("1_ub6ro")
+offset = Vector2(0, -362)
+script = ExtResource("2_ub6ro")
+error_color = Color(0.9843137, 0, 0.28627452, 1)
+success_color = Color(0.21280092, 0.6361098, 0, 1)
+audio_stream_player = NodePath("../../AudioStreamPlayer")
+label_bad = ExtResource("3_1jndd")
+label_nice = ExtResource("4_mypu8")

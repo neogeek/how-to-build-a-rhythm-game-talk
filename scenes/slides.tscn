@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://bdnsj80nvrimh"]
+
+[ext_resource type="Shader" uid="uid://c3nuugtelea28" path="res://shaders/slides_tiled_background.gdshader" id="1_s3xbb"]
+[ext_resource type="Texture2D" uid="uid://bq8qmfx77gu0s" path="res://textures/tiled_background.png" id="1_vuata"]
+[ext_resource type="Script" uid="uid://dmjfu3wc2dhiq" path="res://scripts/slides.gd" id="2_vuata"]
+[ext_resource type="Texture2D" uid="uid://cf1qdph1eg6dq" path="res://slides/slide-0.jpg" id="3_hb11q"]
+[ext_resource type="Resource" uid="uid://cclebhok3kbs3" path="res://slides.tres" id="3_s3xbb"]
+[ext_resource type="PackedScene" uid="uid://c5l170qyfqduo" path="res://scenes/beat_match.tscn" id="6_u680u"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_uxalt"]
+shader = ExtResource("1_s3xbb")
+shader_parameter/texture_scale = 2.5
+shader_parameter/scroll_speed = Vector2(-0.025, 0.025)
+
+[node name="Slides" type="Control" unique_id=574717495]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=1284732897]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Background" type="TextureRect" parent="Panel" unique_id=941353458]
+material = SubResource("ShaderMaterial_uxalt")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_vuata")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="Slides" type="TextureRect" parent="Panel" unique_id=1399358168]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_hb11q")
+expand_mode = 2
+stretch_mode = 5
+script = ExtResource("2_vuata")
+slides = ExtResource("3_s3xbb")
+
+[node name="BeatMatch" parent="Panel" unique_id=235352122 instance=ExtResource("6_u680u")]
+position = Vector2(690.99994, 1089)
