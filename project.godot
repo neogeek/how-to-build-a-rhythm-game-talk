@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="How to Build a Rhythm Game Talk"
-run/main_scene="uid://bdnsj80nvrimh"
+run/main_scene="uid://cx2t6cvikstas"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
