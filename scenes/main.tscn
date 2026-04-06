@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cx2t6cvikstas"]
 
 [ext_resource type="PackedScene" uid="uid://bdnsj80nvrimh" path="res://scenes/slides.tscn" id="1_o5qli"]
+[ext_resource type="Script" uid="uid://bhdwlhbdo8ep1" path="res://scripts/auto_scroller.gd" id="2_0wfyh"]
 
 [node name="Node2D" type="Node2D" unique_id=1274988328]
 
@@ -16,3 +17,6 @@ offset_right = 900.0
 offset_bottom = 584.5
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=711181847]
+
+[node name="AutoScroller" type="Node2D" parent="." unique_id=1107189443]
+script = ExtResource("2_0wfyh")
