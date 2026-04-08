@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cf1qdph1eg6dq" path="res://slides/slide-0.jpg" id="3_hb11q"]
 [ext_resource type="Resource" uid="uid://cclebhok3kbs3" path="res://slides.tres" id="3_s3xbb"]
 [ext_resource type="PackedScene" uid="uid://c5l170qyfqduo" path="res://scenes/beat_match.tscn" id="6_u680u"]
+[ext_resource type="PackedScene" uid="uid://bx27bcfy2ch2w" path="res://scenes/timer.tscn" id="7_u680u"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_uxalt"]
 shader = ExtResource("1_s3xbb")
@@ -56,3 +57,10 @@ slides = ExtResource("3_s3xbb")
 
 [node name="BeatMatch" parent="Panel" unique_id=235352122 instance=ExtResource("6_u680u")]
 position = Vector2(690.99994, 1089)
+
+[node name="Timer" parent="Panel" unique_id=436964286 instance=ExtResource("7_u680u")]
+layout_mode = 1
+offset_left = 1540.0
+offset_top = 84.0
+offset_right = 1540.0
+offset_bottom = 84.0

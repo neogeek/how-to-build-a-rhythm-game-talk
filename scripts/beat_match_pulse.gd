@@ -12,8 +12,6 @@ extends Sprite2D
 
 @export var label_offset: Vector2 = Vector2(0, -175)
 
-var elapsed_time: float = 0
-
 var is_on_the_beat_triggerd: bool = false
 
 var sfx_enabled: bool = true
@@ -22,8 +20,8 @@ var sfx_trigger_count: int = 0
 
 var sfx_trigger_count_max: int = 4
 
-func _process(delta: float) -> void:
-	elapsed_time += delta
+func _process(_delta: float) -> void:
+	var elapsed_time: float = SlidesTimer.get_elapsed_time()
 
 	var is_on_the_beat: bool = rhythm_game_utilities.is_on_the_beat(bpm, elapsed_time, 0.05)
 
@@ -50,6 +48,8 @@ func trigger_scale_pulse() -> void:
 		.set_ease(Tween.EASE_IN_OUT)
 
 func _input(event: InputEvent) -> void:
+	var elapsed_time: float = SlidesTimer.get_elapsed_time()
+
 	var is_on_the_beat: bool = rhythm_game_utilities.is_on_the_beat(bpm, elapsed_time, hit_window)
 
 	if event.is_action_pressed("guitar_strum_up"):
